@@ -50,7 +50,7 @@ void printrangeonconsole(struct range *rangelist, int size){
 }
 
 char *getrangeincsvformat(struct range *rangelist, int index){
-    char s1[6],s2[6],s3[6],s4[6];
+    char s1[8],s2[8],s3[8];
     sprintf(s1, "%d", (rangelist[index].startindex));
     sprintf(s2, "%d", (rangelist[index].endindex));
     sprintf(s3, "%d", (rangelist[index].rangecount));
