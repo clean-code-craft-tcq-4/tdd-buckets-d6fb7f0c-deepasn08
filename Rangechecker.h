@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-struct range
+typedef struct
 {
     int startindex;
     int endindex;
