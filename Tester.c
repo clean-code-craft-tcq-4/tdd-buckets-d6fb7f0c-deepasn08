@@ -18,7 +18,7 @@ int TestSortedarray()
         int *sortedarrayRef = sortinputarray(inputarray, arraylength);
 
         assert(sortedarrayRef[0] == 3);
-        assert(sortedarrayRef[6] == 13);
+        assert(sortedarrayRef[7] == 13);
 
         return 0;
     }
