@@ -42,12 +42,12 @@ int checkrangesofsortedarray(range * rangelist, int *sortedlist, int size){
     return 0;
 }
 
-void printrangeonconsole(range *rangelist, int size){
+/*void printrangeonconsole(range *rangelist, int size){
     for(int i=0;i<size;i++)
     {
     printf("\n Range %d - %d , %d", rangelist[i].startindex, rangelist[i].endindex, rangelist[i].rangecount);
     }
-}
+}*/
 
 char *getrangeincsvformat(range *rangelist, int index){
     char s1[15],s2[15],s3[15];
