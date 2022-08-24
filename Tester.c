@@ -36,13 +36,13 @@ int TestOutputrange()
 {
     {
         /*case1*/
-        int inputarray[] = {4, 9, 5, 3, 11, 12, 10};
+        int inputarray[] = {4, 9, 5, 3, 11, 10};
         int arraylength = ((sizeof(inputarray)) / sizeof(inputarray[0]));
         int *sortedarray = sortinputarray(inputarray, arraylength);
         range rangelist[] = {0, 0, 0};
         checkrangesofsortedarray(rangelist, sortedarray, arraylength);
         assert( strcmp(getrangeincsvformat(rangelist, 0), "3-5, 3")==0);
-        assert( strcmp(getrangeincsvformat(rangelist, 1), "9-12, 4")==0);
+        assert( strcmp(getrangeincsvformat(rangelist, 1), "9-11, 3")==0);
 
         return 0;
     }
