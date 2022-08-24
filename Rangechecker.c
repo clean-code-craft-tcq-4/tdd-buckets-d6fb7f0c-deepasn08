@@ -6,7 +6,7 @@ void swap(int* x, int* y){
     *y = temp;
 }
 
-int sortinputarray(int *list, int size){
+int *sortinputarray(int *list, int size){
 int i, j, min_idx;
 
     // One by one move boundary of unsorted subarray
@@ -18,10 +18,12 @@ int i, j, min_idx;
                 min_idx = j;
         swap(&list[min_idx], &list[i]);
     }
+
+    return &list;
 }
 
 
-int checkrangesofsortedarray(int *sortedlist, int size){
+int *checkrangesofsortedarray(int *sortedlist, int size){
 int no_of_Ranges = 0;
 	
 struct range rangelist[10]; 
@@ -51,11 +53,14 @@ void printrangeonconsole(struct range *rangelist, int size){
     }
 }
 
-int getrangeincsvformat(struct range *rangelist, int index){
-char s1,s2,s3,s4 = {"\0"};
-s1 = strcat((rangelist[index].startindex),"-");
-s2 = strcat(s1, rangelist[index].endindex);
-s3 = strcat(s2, ", ");
-s4 = strcat(s3, rangelist[index].rangecount);
-return s4;
+char *getrangeincsvformat(struct range *rangelist, int index){
+char s1[6],s2[6],s3[6],s4[6];
+sprintf(s1, "%d", (rangelist[index].startindex));
+sprintf(s2, "%d", (rangelist[index].endindex));
+sprintf(s3, "%d", (rangelist[index].rangecount));
+char string1 = strcat(s1,"-");
+char string2 = strcat(string1, s2);
+char string3 = strcat(string2, ", ");
+char string4 = strcat(string3, s3);
+return string4;
 }
