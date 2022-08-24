@@ -19,7 +19,7 @@ int * sortinputarray(int *list, int size){
 }
 
 
-int checkrangesofsortedarray(struct range * rangelist, int *sortedlist, int size){
+int checkrangesofsortedarray(range * rangelist, int *sortedlist, int size){
      
     int no_of_Ranges = 0;
     rangelist[no_of_Ranges].startindex = sortedlist[0];
@@ -42,14 +42,14 @@ int checkrangesofsortedarray(struct range * rangelist, int *sortedlist, int size
     return 0;
 }
 
-void printrangeonconsole(struct range *rangelist, int size){
+void printrangeonconsole(range *rangelist, int size){
     for(int i=0;i<size;i++)
     {
     printf("\n Range %d - %d , %d", rangelist[i].startindex, rangelist[i].endindex, rangelist[i].rangecount);
     }
 }
 
-char *getrangeincsvformat(struct range *rangelist, int index){
+char *getrangeincsvformat(range *rangelist, int index){
     char s1[8],s2[8],s3[8];
     sprintf(s1, "%d", (rangelist[index].startindex));
     sprintf(s2, "%d", (rangelist[index].endindex));

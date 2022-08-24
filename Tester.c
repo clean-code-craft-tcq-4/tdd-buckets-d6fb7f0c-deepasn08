@@ -39,7 +39,7 @@ int TestOutputrange()
         int inputarray[] = {4, 9, 5, 3, 11, 12, 10};
         int arraylength = ((sizeof(inputarray)) / sizeof(inputarray[0]));
         int *sortedarray = sortinputarray(inputarray, arraylength);
-        struct range rangelist[] = {0, 0, 0};
+        range rangelist[] = {0, 0, 0};
         checkrangesofsortedarray(rangelist, sortedarray, arraylength);
         assert( getrangeincsvformat(rangelist, 0) == "3-5, 3");
         assert(getrangeincsvformat(rangelist, 1) == "9-12, 4");
