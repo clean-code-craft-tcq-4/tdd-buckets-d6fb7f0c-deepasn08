@@ -1,5 +1,5 @@
 #include "Rangechecker.h"
-#include "assert"
+#include <assert.h>
 
 int main()
 {
