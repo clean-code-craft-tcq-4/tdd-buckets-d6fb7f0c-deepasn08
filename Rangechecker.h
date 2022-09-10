@@ -12,9 +12,9 @@ typedef struct
 void swap(int* x, int* y);
 int *sortinputarray(int *list, int size);
 int checkrangesofsortedarray(range * rangelist, int *sortedlist, int size);
-void printrangeonconsole(range *rangelist, int size);
+//void printrangeonconsole(range *rangelist, int size);
 char *getrangeincsvformat(range *rangelist, int index);
 
 int TestSortedarray();
 int TestOutputrange();
-
+int TestA2Dconversion();

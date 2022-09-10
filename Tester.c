@@ -1,10 +1,12 @@
 #include "Rangechecker.h"
 #include <assert.h>
+#include "A2DConversion.h"
 
 int main()
 {
     TestSortedarray();
     TestOutputrange();
+    TestA2Dconversion();
 }
 
 
@@ -47,3 +49,12 @@ int TestOutputrange()
         return 0;
     }
 }
+
+ //Test Case for A2D Conversion
+ int TestA2Dconversion()
+ {
+    /*case1*/
+    assert(A2Dconverter(10,1146,12) == 3);
+    /*case2*/
+    assert(A2Dconverter(10,1600,12) == 4);
+ }
